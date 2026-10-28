@@ -1,278 +1,291 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hadiah Digital Spesial</title>
-    <!-- Menggunakan font modern -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
-    <style>
-        /* --- DESAIN TEMA GELAP (DARK NEON) --- */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0d0914; /* Warna hitam keunguan gelap */
-            text-align: center;
-            padding: 20px;
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-        }
-        .container {
-            background-color: #161020;
-            padding: 30px 20px;
-            border-radius: 20px;
-            box-shadow: 0 0 20px rgba(168, 85, 247, 0.2); /* Efek glow ungu */
-            width: 85%;
-            max-width: 400px;
-            border: 1px solid #2d1b4e;
-        }
-        .screen { display: none; }
-        .active { display: block; animation: fadeIn 0.5s; }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⛏️ Mod Minecraft — Download Gratis</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --bg-dark:#0d1117; --bg:#161b22; --bg-card:#1c2333; --bg-card-hover:#232b3e;
+    --border:#30363d; --green:#5cb85c; --green-bright:#7ed957; --green-dark:#3a7a2a;
+    --gold:#f5c542; --text:#e6edf3; --text-dim:#8b949e; --blue:#4a9eff; --pixel-font:'Courier New',monospace;
+  }
+  html { scroll-behavior:smooth; }
+  body { background:var(--bg-dark); color:var(--text); font-family:'Segoe UI',system-ui,sans-serif; min-height:100vh; line-height:1.6; }
+  header { position:sticky; top:0; z-index:100; background:linear-gradient(135deg,#1a2332,#0d1117); border-bottom:3px solid var(--green); padding:16px 20px; }
+  .header-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .logo { display:flex; align-items:center; gap:12px; }
+  .logo-icon { font-size:2.2rem; }
+  .logo h1 { font-family:var(--pixel-font); font-size:1.4rem; font-weight:900; color:var(--green-bright); }
+  .logo p { font-size:.72rem; color:var(--text-dim); font-family:var(--pixel-font); }
+  .header-stats { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  .stat-pill { background:rgba(92,184,92,.1); border:2px solid var(--green-dark); border-radius:8px; padding:6px 14px; font-size:.8rem; font-weight:700; display:flex; align-items:center; gap:6px; font-family:var(--pixel-font); }
+  .stat-pill .val { color:var(--gold); font-size:1rem; }
+  .btn-vip { background:linear-gradient(180deg, #ffd700, #b8860b); color:#000; border:2px solid #fff; border-radius:8px; padding:8px 16px; font-weight:900; cursor:pointer; font-family:var(--pixel-font); font-size:.8rem; }
+  .btn-vip.active { background:linear-gradient(180deg, #4cd97b, #2a7a4a); color:#fff; border-color:#4cd97b; }
 
-        h2 { 
-            background: linear-gradient(90deg, #ff7eb3, #a855f7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px; 
-            font-size: 24px;
-            font-weight: 800;
-        }
-        p { color: #9ca3af; margin-bottom: 20px; font-size: 14px; }
-        
-        button {
-            background: linear-gradient(90deg, #ec4899, #a855f7); /* Gradasi pink ke ungu */
-            color: white;
-            border: none;
-            padding: 15px;
-            margin: 8px 0;
-            border-radius: 50px; /* Tombol bulat panjang */
-            font-size: 15px;
-            cursor: pointer;
-            width: 100%;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
-        }
-        button:hover { 
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6);
-        }
-        
-        .btn-back { 
-            background: transparent; 
-            border: 2px solid #4b5563;
-            box-shadow: none;
-            color: #d1d5db;
-            margin-top: 15px;
-        }
-        .btn-back:hover {
-            background: #374151;
-            box-shadow: none;
-        }
-        
-        .btn-success { 
-            background: linear-gradient(90deg, #10b981, #059669);
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
-        }
+  .container { max-width:1100px; margin:0 auto; padding:20px 20px 80px; }
+  .hero { background:linear-gradient(135deg,#1c2a1c,#1a2332); border:3px solid var(--green-dark); border-radius:16px; padding:24px; margin-bottom:24px; }
+  .hero h2 { font-family:var(--pixel-font); font-size:1.5rem; color:var(--green-bright); margin-bottom:8px; }
+  .hero p { color:var(--text-dim); font-size:.9rem; max-width:600px; }
+  
+  .controls { display:flex; gap:12px; margin-bottom:20px; flex-wrap:wrap; align-items:center; }
+  .search-wrap { flex:1; min-width:220px; position:relative; }
+  .search-wrap::before { content:"🔍"; position:absolute; left:14px; top:50%; transform:translateY(-50%); }
+  .search-input { width:100%; padding:12px 14px 12px 44px; background:var(--bg-card); border:2px solid var(--border); border-radius:10px; color:var(--text); font-size:.9rem; }
+  .filter-wrap { display:flex; gap:6px; flex-wrap:wrap; }
+  .filter-btn { padding:10px 16px; background:var(--bg-card); border:2px solid var(--border); border-radius:10px; color:var(--text-dim); font-weight:800; font-size:.78rem; cursor:pointer; font-family:var(--pixel-font); }
+  .filter-btn.active { background:linear-gradient(180deg,var(--green),var(--green-dark)); border-color:var(--green-bright); color:#fff; }
 
-        input {
-            padding: 15px;
-            font-size: 16px;
-            border-radius: 50px;
-            border: 1px solid #4b5563;
-            background-color: #1f1433;
-            color: white;
-            width: 80%;
-            margin-bottom: 15px;
-            text-align: center;
-            outline: none;
-            transition: 0.3s;
-        }
-        input:focus { border-color: #a855f7; box-shadow: 0 0 10px rgba(168, 85, 247, 0.5); }
+  .mod-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; }
+  .mod-card { background:var(--bg-card); border:2px solid var(--border); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; }
+  
+  .mod-img { height:160px; background:linear-gradient(135deg,#2a3a2a,#1a2332); display:flex; align-items:center; justify-content:center; font-size:4rem; position:relative; border-bottom:2px solid var(--border); overflow: hidden; }
+  .mod-img img { width: 100%; height: 100%; object-fit: cover; }
 
-        .box-ucapan {
-            background: #1f1433;
-            padding: 20px;
-            border-radius: 15px;
-            border: 1px solid #a855f7;
-            margin-top: 15px;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #f3f4f6;
-            box-shadow: inset 0 0 15px rgba(168, 85, 247, 0.1);
-        }
-        
-        .highlight {
-            color: #ff7eb3;
-            font-weight: bold;
-        }
-    </style>
+  .mod-version { position:absolute; top:10px; right:10px; background:rgba(0,0,0,.7); border:1px solid var(--gold); color:var(--gold); padding:2px 8px; border-radius:6px; font-size:.65rem; font-weight:900; font-family:var(--pixel-font); z-index:2; }
+  .mod-category { position:absolute; top:10px; left:10px; background:rgba(92,184,92,.9); color:#fff; padding:2px 8px; border-radius:6px; font-size:.65rem; font-weight:900; font-family:var(--pixel-font); z-index:2; }
+  .mod-body { padding:14px 16px; flex:1; display:flex; flex-direction:column; }
+  .mod-name { font-size:1rem; font-weight:900; color:var(--text); margin-bottom:4px; font-family:var(--pixel-font); }
+  .mod-author { font-size:.72rem; color:var(--text-dim); margin-bottom:8px; }
+  .mod-desc { font-size:.8rem; color:var(--text-dim); margin-bottom:12px; flex:1; }
+  .mod-meta { display:flex; gap:10px; font-size:.7rem; color:var(--text-dim); margin-bottom:10px; }
+  .mod-actions { display:flex; gap:6px; }
+  .btn-download { flex:1; background:linear-gradient(180deg,var(--green),var(--green-dark)); border:2px solid var(--green-bright); color:#fff; padding:10px 12px; border-radius:8px; font-weight:900; font-size:.82rem; cursor:pointer; box-shadow:0 3px 0 rgba(0,0,0,.4); }
+
+  /* MODAL IKLAN & VIP */
+  #modalIklan, #modalVIP { position:fixed; inset:0; background:rgba(5,3,13,.95); z-index:1000; display:none; align-items:center; justify-content:center; padding:20px; }
+  #modalIklan.show, #modalVIP.show { display:flex; }
+  .modal-box { background:var(--bg-card); border:3px solid var(--gold); border-radius:16px; padding:24px; max-width:420px; width:100%; text-align:center; }
+  .modal-box h3 { color:var(--gold); font-family:var(--pixel-font); font-size:1.2rem; margin-bottom:8px; }
+  .iklan-slot { background:#0d1117; height:120px; border:2px dashed var(--border); border-radius:8px; display:flex; align-items:center; justify-content:center; margin:15px 0; color:var(--text-dim); font-size:.8rem; }
+  .timer-text { font-size:2.5rem; font-weight:900; color:var(--gold); margin:10px 0; font-family:var(--pixel-font); }
+  .vip-promo { background:linear-gradient(135deg, #2a1e4a, #4b2a7a); border:2px solid var(--gold); border-radius:12px; padding:15px; margin:15px 0; text-align:center; }
+  .btn-beli-vip { display:inline-block; background:linear-gradient(180deg, #ffd700, #b8860b); color:#000; padding:10px 20px; border-radius:8px; font-weight:900; text-decoration:none; font-size:.85rem; width:100%; }
+  .btn-lanjut-download { display:none; width:100%; background:var(--green); color:#fff; padding:12px; border:none; border-radius:8px; font-weight:900; cursor:pointer; margin-top:10px; }
+  .btn-lanjut-download.show { display:block; }
+  .btn-close { background:transparent; color:var(--text-dim); margin-top:10px; border:none; font-size:0.75rem; cursor:pointer; text-decoration:underline; }
+  #inputVIPCode { width:100%; padding:12px; background:#0d1117; border:2px solid var(--border); border-radius:8px; color:#fff; text-align:center; font-size:1rem; margin-bottom:12px; font-weight:900; }
+  #btnSubmitVIP { width:100%; padding:12px; background:linear-gradient(180deg,#ffd700,#b8860b); color:#000; border:none; border-radius:8px; font-weight:900; cursor:pointer; font-size:1rem; }
+</style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- LAYAR 1: MENU UTAMA -->
-        <div id="menu-utama" class="screen active">
-            <h2>Hadiah Digital Spesial 💖</h2>
-            <p>Platform ucapan digital untuk orang tersayang.</p>
-            <button onclick="tampilkanLayar('menu-ultah')">🎂 Ucapan Selamat Ulang Tahun</button>
-            <button onclick="tampilkanLayar('menu-pacar')">💌 Ucapan Untuk Pacar</button>
-            <button onclick="tampilkanLayar('menu-game')">🎮 Ruang Game</button>
-        </div>
-
-        <!-- LAYAR 2: UCAPAN ULANG TAHUN -->
-        <div id="menu-ultah" class="screen">
-            <h2>Selamat Ulang Tahun! 🎉</h2>
-            <div class="box-ucapan">
-                <p>Barakallahu fi umrik! 🎂<br><br>Selamat bertambah usia ya sayang. Semoga panjang umur, sehat selalu, dilancarkan rezekinya, dan semua mimpi yang kamu impikan bisa segera terwujud. Aku akan selalu ada di sini buat nemenin kamu. <span class="highlight">I love you! ❤️</span></p>
-            </div>
-            <button onclick="tampilkanLayar('menu-utama')" class="btn-back">⬅ Kembali ke Menu</button>
-        </div>
-
-        <!-- LAYAR 3: MENU PACAR -->
-        <div id="menu-pacar" class="screen">
-            <h2>Pilih Suasana Hati:</h2>
-            <button onclick="mulaiGame('gombal')">😎 Gombal (Baper)</button>
-            <button onclick="mulaiGame('nyambak')">😭 Lagi Sedih/Nyambak</button>
-            <button onclick="mulaiGame('biasa')">😊 Ucapan Biasa</button>
-            <button onclick="tampilkanLayar('menu-utama')" class="btn-back">⬅ Kembali</button>
-        </div>
-
-        <!-- LAYAR 4: MENU GAME -->
-        <div id="menu-game" class="screen">
-            <h2>Ruang Game 🎮</h2>
-            <p>Main dulu yuk sebelum dapat hadiah!</p>
-            <button onclick="mainTebakAngka()">🔢 Tebak Angka</button>
-            <button onclick="mainTebakKata()">💌 Tebak Kata</button>
-            <button onclick="tampilkanLayar('menu-utama')" class="btn-back">⬅ Kembali</button>
-        </div>
-
-        <!-- LAYAR 5: AREA GAME -->
-        <div id="area-game" class="screen">
-            <h2 id="judul-game">Mini Game</h2>
-            <div id="konten-game" style="margin-top: 20px;"></div>
-            <button id="tombol-kejutan" onclick="tampilkanUcapan()" class="btn-success" style="display:none; margin-top: 15px;">Buka Hadiah 🎁</button>
-            <button onclick="tampilkanLayar('menu-utama')" class="btn-back">⬅ Menu Utama</button>
-        </div>
-
-        <!-- LAYAR 6: HASIL UCAPAN PACAR -->
-        <div id="layar-ucapan" class="screen">
-            <h2>Pesan Spesial 💕</h2>
-            <div class="box-ucapan">
-                <p id="teks-ucapan"></p>
-            </div>
-            <button onclick="tampilkanLayar('menu-utama')" class="btn-back">🏠 Menu Utama</button>
-        </div>
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">⛏️</span>
+      <div>
+        <h1>MOD MINECRAFT</h1>
+        <p>DOWNLOAD GRATIS · 100% AMAN</p>
+      </div>
     </div>
+    <div class="header-stats">
+      <div class="stat-pill">📦 Total: <span class="val" id="totalMods">0</span></div>
+      <button class="btn-vip" id="btnOpenVIP">👑 VIP</button>
+    </div>
+  </div>
+</header>
 
-    <script>
-        let kategoriDipilih = "";
-        let angkaRahasia = 0;
+<div class="container">
+  <div class="hero">
+    <h2>⛏️ Koleksi Mod Minecraft Terbaik</h2>
+    <p>Kumpulan mod pilihan. Punya kode VIP? Bebas iklan!</p>
+  </div>
 
-        function tampilkanLayar(idLayar) {
-            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-            document.getElementById(idLayar).classList.add('active');
-            document.getElementById('tombol-kejutan').style.display = 'none';
-            kategoriDipilih = ""; 
-        }
+  <div class="controls">
+    <div class="search-wrap">
+      <input type="text" class="search-input" id="searchInput" placeholder="Cari nama mod...">
+    </div>
+    <div class="filter-wrap" id="filterWrap">
+      <button class="filter-btn active" data-cat="all">Semua</button>
+      <button class="filter-btn" data-cat="addon">🧩 Add-on</button>
+      <button class="filter-btn" data-cat="shader">✨ Shader</button>
+      <button class="filter-btn" data-cat="world">🌍 World</button>
+      <button class="filter-btn" data-cat="weapon">⚔️ Weapon</button>
+      <button class="filter-btn" data-cat="armor">🛡️ Armor</button>
+      <button class="filter-btn" data-cat="mob">🐲 Mob</button>
+    </div>
+  </div>
 
-        // --- LOGIKA GAME UNTUK PACAR ---
-        function mulaiGame(kategori) {
-            kategoriDipilih = kategori;
-            tampilkanLayar('area-game');
-            document.getElementById('judul-game').innerText = "Game Dulu Ya!";
-            
-            let konten = document.getElementById('konten-game');
-            if (kategori === 'gombal') {
-                konten.innerHTML = `<p>Klik tombol ini untuk menangkap hatiku!</p>
-                                    <button onclick="menangGame()">Tangkap Hati 🎈</button>`;
-            } else if (kategori === 'nyambak') {
-                konten.innerHTML = `<p>Peluk virtual dulu ya biar nggak sedih!</p>
-                                    <button onclick="menangGame()">Peluk Aku 🫂</button>`;
-            } else {
-                konten.innerHTML = `<p>Klik tombol ini untuk buka ucapan.</p>
-                                    <button onclick="menangGame()">Buka 🎁</button>`;
-            }
-        }
+  <div class="mod-grid" id="modGrid"></div>
+</div>
 
-        // --- LOGIKA GAME DI RUANG GAME ---
-        function mainTebakAngka() {
-            tampilkanLayar('area-game');
-            document.getElementById('judul-game').innerText = "Tebak Angka (1-10)";
-            angkaRahasia = Math.floor(Math.random() * 10) + 1;
-            
-            document.getElementById('konten-game').innerHTML = `
-                <p>Aku pikirkan angka 1 sampai 10. Coba tebak!</p>
-                <input type="number" id="inputAngka" placeholder="Ketik angka...">
-                <button onclick="cekTebakan()">Tebak!</button>
-                <p id="hasilTebak" style="font-weight:bold; color: #ff7eb3; margin-top: 10px;"></p>
-            `;
-        }
+<!-- MODAL IKLAN -->
+<div id="modalIklan">
+  <div class="modal-box">
+    <h3>⏳ Menyiapkan File...</h3>
+    <div class="iklan-slot">(Slot Iklan Anda)</div>
+    <div class="timer-text" id="timerDisplay">5</div>
+    <div class="vip-promo">
+      <h4>👑 Bebas Iklan & Timer!</h4>
+      <p>Beli Akses VIP cuma Rp2.000 / minggu.</p>
+      <a href="https://trakteer.id/bang_ris2/gift" target="_blank" class="btn-beli-vip">💳 Beli VIP (Rp2.000)</a>
+    </div>
+    <button class="btn-lanjut-download" id="btnLanjutDownload">⬇️ Lanjut Download</button>
+    <button class="btn-close" id="btnCloseIklan">Batal Download</button>
+  </div>
+</div>
 
-        function cekTebakan() {
-            let tebakan = parseInt(document.getElementById('inputAngka').value);
-            let hasil = document.getElementById('hasilTebak');
-            
-            if (tebakan === angkaRahasia) {
-                hasil.innerHTML = "🎉 Benar! Kamu hebat!";
-                document.getElementById('tombol-kejutan').style.display = 'block';
-            } else {
-                hasil.innerHTML = tebakan < angkaRahasia ? "❌ Terlalu kecil!" : "❌ Terlalu besar!";
-            }
-        }
+<!-- MODAL VIP -->
+<div id="modalVIP">
+  <div class="modal-box" style="border-color:var(--gold);">
+    <h3>👑 Akses VIP</h3>
+    <p>Masukkan kode rahasia untuk menghilangkan iklan.</p>
+    <input type="text" id="inputVIPCode" placeholder="KODE-VIP" autocomplete="off">
+    <button id="btnSubmitVIP">Aktifkan VIP</button>
+    <button class="btn-close" id="btnCloseVIP">Tutup</button>
+  </div>
+</div>
 
-        function mainTebakKata() {
-            tampilkanLayar('area-game');
-            document.getElementById('judul-game').innerText = "Tebak Kata Cinta";
-            document.getElementById('konten-game').innerHTML = `
-                <p>Aku adalah perasaan yang bikin hati berbunga-bunga. Apa aku?</p>
-                <input type="text" id="inputKata" placeholder="Ketik jawaban...">
-                <button onclick="cekTebakanKata()">Jawab</button>
-                <p id="hasilKata" style="font-weight:bold; color: #ff7eb3; margin-top: 10px;"></p>
-            `;
-        }
+<script>
+const KODE_VIP_RAHASIA = "VIP-BANGRIS"; 
+const DURASI_VIP_HARI = 7; 
 
-        function cekTebakanKata() {
-            let tebakan = document.getElementById('inputKata').value.toLowerCase();
-            let hasil = document.getElementById('hasilKata');
-            
-            if (tebakan.includes("cinta") || tebakan.includes("sayang")) {
-                hasil.innerHTML = "🎉 Tepat sekali!";
-                document.getElementById('tombol-kejutan').style.display = 'block';
-            } else {
-                hasil.innerHTML = "❌ Belum tepat, coba lagi! (Clue: 5 huruf)";
-            }
-        }
+const MODS = [
+  { id:1, name:"Torch Offhand BH", category:"addon", emoji:"🔦", version:"v3.9.5", rating:4.8, downloads:"10.9 KB", desc:"Memegang obor di tangan kiri.", link:"https://www.mediafire.com/file/qywov0zighrv4if/Torch_Offhand_BH_v3.9.5.mcpack/file", img:"https://i.postimg.cc/WbrNyTT4/20260611-21564-jpeg.jpg" },
+  { id:2, name:"Actions Stuff", category:"addon", emoji:"🎬", version:"v1.12", rating:4.7, downloads:"63.3 MB", desc:"Animasi dan aksi keren.", link:"https://www.mediafire.com/file/h2ff48qea7vpwgr/Actions_Stuff_1.12.mcpack/file", img:"https://i.postimg.cc/05KP6P6p/images-(1).jpg" },
+  { id:3, name:"Create Movement", category:"addon", emoji:"🏃", version:"v1.0", rating:4.6, downloads:"1.2 MB", desc:"Animasi pergerakan baru.", link:"https://www.mediafire.com/file/kv3lvve9oicw3iz/CreateMovement.mcaddon.zip/file", img:"" },
+  { id:4, name:"Custom Space Cubemap", category:"shader", emoji:"🌌", version:"v2.0", rating:4.9, downloads:"5.4 MB", desc:"Langit dan luar angkasa kustom.", link:"https://www.mediafire.com/file/phl8c1fozb3z4i7/Custom_Space_Cubemap_v2.0.mcpack.zip/file", img:"" },
+  { id:5, name:"Kampungku", category:"world", emoji:"🏘️", version:"v1.0", rating:4.5, downloads:"12 MB", desc:"Suasana pedesaan Indonesia.", link:"https://www.mediafire.com/file/43q8vg2qo7og59t/Kampungku.mcaddon/file", img:"" },
+  { id:6, name:"OP Items Pack", category:"weapon", emoji:"⚔️", version:"v1.0", rating:4.6, downloads:"2.1 MB", desc:"Item super overpower.", link:"https://www.mediafire.com/file/bxixnvoionwmk3w/OlCWaPvhUe.mcpack/file", img:"" },
+  { id:7, name:"Tree Drops OP Items", category:"addon", emoji:"🌳", version:"v1.0", rating:4.9, downloads:"650 KB", desc:"Pohon menjatuhkan item OP.", link:"https://www.mediafire.com/file/8pxnl2rotxp5h6z/Tree_Drops_OP_Items.mcaddon.zip/file", img:"" },
+  { id:8, name:"Mob Overhaul", category:"mob", emoji:"🐲", version:"v1.0", rating:4.7, downloads:"3.5 MB", desc:"Variasi mob baru.", link:"https://www.mediafire.com/file/6ish2zbz6kauoaz/VBd6STRhHR.mcaddon/file", img:"" },
+  { id:9, name:"Weapon & Armor Pack", category:"armor", emoji:"🛡️", version:"v1.0", rating:4.8, downloads:"4.2 MB", desc:"Armor dan senjata baru.", link:"https://www.mediafire.com/file/n6wk9afi9mec4ju/vCOz8mJgQw.mcaddon/file", img:"" }
+];
 
-        // --- FUNGSI SELESAI GAME & UCAPAN ---
-        function menangGame() {
-            document.getElementById('konten-game').innerHTML = "<p>Yeay! Kamu berhasil! 🎉</p>";
-            document.getElementById('tombol-kejutan').style.display = 'block';
-        }
+const CAT_LABELS = { addon:"🧩 Add-on", shader:"✨ Shader", world:"🌍 World", weapon:"⚔️ Weapon", armor:"🛡️ Armor", mob:"🐲 Mob" };
+let currentFilter = 'all', currentSearch = '';
+const grid = document.getElementById('modGrid');
 
-        function tampilkanUcapan() {
-            tampilkanLayar('layar-ucapan');
-            let teks = "";
-            if (kategoriDipilih === 'gombal') {
-                teks = "Kamu tahu nggak bedanya kamu sama matahari? Kalau matahari bikin terang dunia, kalau kamu bikin terang hidupku. I love you! 🥰";
-            } else if (kategoriDipilih === 'nyambak') {
-                teks = "Jangan sedih terus ya. Aku selalu ada buat kamu. Peluk virtual dari jauh! ❤️ Semangat ya!";
-            } else if (kategoriDipilih === 'biasa') {
-                teks = "Selamat hari yang indah! Semoga harimu menyenangkan dan jangan lupa makan ya. Aku sayang kamu selalu.";
-            } else {
-                teks = "Kamu berhasil menyelesaikan game-nya! Ini hadiah rahasianya: Aku sayang kamu, hari ini, besok, dan selamanya. 💖";
-            }
-            document.getElementById('teks-ucapan').innerText = teks;
-        }
-    </script>
+function cekStatusVIP() {
+  const vipExpired = localStorage.getItem('vip_expired');
+  const btnOpenVIP = document.getElementById('btnOpenVIP');
+  if (vipExpired) {
+    if (new Date().getTime() < parseInt(vipExpired)) {
+      btnOpenVIP.classList.add('active');
+      btnOpenVIP.innerHTML = "👑 VIP Aktif";
+      return true;
+    } else {
+      localStorage.removeItem('vip_expired');
+      btnOpenVIP.classList.remove('active');
+      btnOpenVIP.innerHTML = "👑 VIP";
+    }
+  }
+  return false;
+}
+
+document.getElementById('btnOpenVIP').addEventListener('click', () => {
+  if (cekStatusVIP()) { alert("Kamu sudah VIP! Iklan sudah hilang."); } else { document.getElementById('modalVIP').classList.add('show'); }
+});
+
+document.getElementById('btnCloseVIP').addEventListener('click', () => { document.getElementById('modalVIP').classList.remove('show'); });
+
+document.getElementById('btnSubmitVIP').addEventListener('click', () => {
+  const kode = document.getElementById('inputVIPCode').value.trim().toUpperCase();
+  if (kode === KODE_VIP_RAHASIA) {
+    const expiredTime = new Date().getTime() + (DURASI_VIP_HARI * 24 * 60 * 60 * 1000);
+    localStorage.setItem('vip_expired', expiredTime);
+    alert("🎉 Berhasil! Kamu sekarang VIP.");
+    document.getElementById('modalVIP').classList.remove('show');
+    cekStatusVIP();
+  } else { alert("❌ Kode VIP salah!"); }
+});
+
+let currentDownloadLink = "";
+let timerInterval = null;
+
+function klikDownload(link) {
+  if (cekStatusVIP()) {
+    window.open(link, '_blank'); 
+  } else {
+    currentDownloadLink = link;
+    document.getElementById('modalIklan').classList.add('show');
+    let timeLeft = 5;
+    document.getElementById('timerDisplay').textContent = timeLeft;
+    document.getElementById('btnLanjutDownload').classList.remove('show');
+    document.getElementById('timerDisplay').style.display = 'block';
+    
+    clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+      timeLeft--;
+      document.getElementById('timerDisplay').textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        document.getElementById('timerDisplay').style.display = 'none';
+        document.getElementById('btnLanjutDownload').classList.add('show');
+      }
+    }, 1000);
+  }
+}
+
+document.getElementById('btnCloseIklan').addEventListener('click', () => {
+  document.getElementById('modalIklan').classList.remove('show');
+  clearInterval(timerInterval);
+});
+
+document.getElementById('btnLanjutDownload').addEventListener('click', () => {
+  document.getElementById('modalIklan').classList.remove('show');
+  window.open(currentDownloadLink, '_blank');
+});
+
+function renderMods() {
+  const filtered = MODS.filter(mod => {
+    const matchCat = currentFilter === 'all' || mod.category === currentFilter;
+    const matchSearch = mod.name.toLowerCase().includes(currentSearch.toLowerCase());
+    return matchCat && matchSearch;
+  });
+
+  grid.innerHTML = '';
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div style="text-align:center; grid-column:1/-1; padding:60px 20px; color:#8b949e;"><h3>Tidak ada mod ditemukan</h3></div>`;
+    return;
+  }
+
+  filtered.forEach((mod) => {
+    const card = document.createElement('div');
+    card.className = 'mod-card';
+    
+    // PERBAIKAN: Pakai onerror buat jaga-jaga kalau gambar mati
+    let imgHtml = `<span class="emoji">${mod.emoji}</span>`;
+    if(mod.img) {
+        imgHtml = `<img src="${mod.img}" alt="${mod.name}" onerror="this.style.display='none'; this.parentElement.innerHTML = '<span class=\\'emoji\\'>${mod.emoji}</span>'; this.parentElement.appendChild(document.querySelector('.mod-category')); this.parentElement.appendChild(document.querySelector('.mod-version'));">`;
+    }
+
+    card.innerHTML = `
+      <div class="mod-img">
+        <span class="mod-category">${CAT_LABELS[mod.category]}</span>
+        <span class="mod-version">${mod.version}</span>
+        ${imgHtml}
+      </div>
+      <div class="mod-body">
+        <div class="mod-name">${mod.name}</div>
+        <div class="mod-author">oleh Bang Ris</div>
+        <div class="mod-desc">${mod.desc}</div>
+        <div class="mod-meta"><span class="star">⭐ ${mod.rating}</span><span>📥 ${mod.downloads}</span></div>
+        <div class="mod-actions">
+          <button class="btn-download" onclick="klikDownload('${mod.link}')">⬇️ Download</button>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+document.getElementById('searchInput').addEventListener('input', (e) => { currentSearch = e.target.value; renderMods(); });
+document.getElementById('filterWrap').addEventListener('click', (e) => {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentFilter = btn.dataset.cat;
+  renderMods();
+});
+
+document.getElementById('totalMods').textContent = MODS.length;
+renderMods();
+cekStatusVIP();
+</script>
 </body>
     </html>
